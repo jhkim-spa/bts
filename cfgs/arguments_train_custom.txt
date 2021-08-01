@@ -1,0 +1,30 @@
+--mode train
+--model_name resnet50_100e
+--encoder resnet50_bts
+--dataset custom
+--data_path ./data/custom_data
+--gt_path ./data/custom_data
+--filenames_file ./train_test_inputs/train_list.txt
+--batch_size 2
+--num_epochs 100
+--learning_rate 1e-4
+--weight_decay 1e-2
+--adam_eps 1e-3
+--num_threads 1
+--input_height 480
+--input_width 640
+--max_depth 70
+--do_random_rotate
+--degree 2.5
+--log_directory ./models
+
+--log_freq 100
+--do_online_eval
+--eval_freq 1250
+--data_path_eval ./data/custom_data
+--gt_path_eval ./data/custom_data
+--filenames_file_eval ./train_test_inputs/val_list.txt
+--min_depth_eval 1e-1
+--max_depth_eval 70
+--eval_summary_directory ./models/eval/
+--eigen_crop

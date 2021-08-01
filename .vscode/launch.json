@@ -1,0 +1,48 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Python: Current File",
+			"type": "python",
+			"request": "launch",
+			// "program": "bts_main.py",
+			// "program": "test.py",
+			// "program": "visualize_3d_rgbd.py",
+			// "program": "compare_3d.py",
+			// "program": "make_list.py",
+			"program": "inference_cam.py",
+
+			"console": "integratedTerminal",
+			"justMyCode": false,
+			// "args": ["resnet50_100e"]
+			// "args": ["results/resnet50_100e"]
+			// "args": ["arguments_train_custom.txt"],
+			// "args": ["cfgs/arguments_test_custom.txt"]
+			// "args": ["results/compare/only_trainset",
+			// "results/video/only_trainset"]
+			// "args": ["result_bts_custom"]
+			"args": [
+				"--model_name", "resnet50_100e",
+				"--encoder", "resnet50_bts",
+				"--data_path", "./data/custom_data",
+				"--dataset", "custom",
+				"--filenames_file", "./train_test_inputs/test_list.txt",
+				"--checkpoint_path",
+				"./models/resnet50_100e/model-120000-best_log10_0.01668",
+				"--input_height", "480",
+				"--input_width", "640",
+				"--max_depth", "70"
+			]
+		},
+		// {
+		// 	"name": "make_list",
+		// 	"type": "python",
+		// 	"request": "launch",
+		// 	"program": "make_list.py",
+		// 	"console": "integratedTerminal"
+		// }
+	]
+}

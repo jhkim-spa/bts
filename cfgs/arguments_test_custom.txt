@@ -1,0 +1,9 @@
+--encoder resnet50_bts
+--data_path ./data/custom_data
+--dataset custom
+--filenames_file ./train_test_inputs/test_list.txt
+--model_name resnet50_100e
+--checkpoint_path ./models/resnet50_100e/model-120000-best_log10_0.01668
+--input_height 480
+--input_width 640
+--max_depth 70
